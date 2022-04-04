@@ -14,8 +14,8 @@ más el 5% del valor de la venta por carro. Cada mes el capturista de la empresa
         float comision1 = cantAutosVendidos * 150;
         
         System.out.print("Ingrese el valor del auto: ");
-        float valorCarro = sc.nextFloat();
-        float comision2 = (valorCarro * 0.05f) * cantAutosVendidos;
+        float valorAuto = sc.nextFloat();
+        float comision2 = (valorAuto * 0.05f) * cantAutosVendidos;
 
 
         float salarioPersonal = 1000 + comision1 + comision2;
