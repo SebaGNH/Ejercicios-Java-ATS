@@ -16,9 +16,8 @@ public static void main(String[] args) throws Exception{
 
     do {
         System.out.println("Indique en que posicion se movera - arriba, abajo, izquierda, derecha - escriba fin para salir");
-        coordenada = sc.next();
+        coordenada = sc.next(); 
         System.out.println(om.obtenerPosicion(coordenada));
-
         
     } while (!coordenada.equals("fin"));
     

@@ -31,11 +31,13 @@ public class ObjetoMovil {
     }
 
     public String obtenerPosicion(String coordenadas){
-        switch(coordenadas){
+        String mensaje ="";
+        switch(coordenadas.toLowerCase()){
             case "izquierda": this.coordenadaX --   ; break;
             case "derecha"  : this.coordenadaX ++   ; break;
             case "arriba"   : this.coordenadaY ++   ; break;
             case "abajo"    : this.coordenadaY --   ; break;
+            default: return "Se equivoco de opcion";
         }
         return "X: "+this.coordenadaX+"\nY: "+this.coordenadaY;
     }
