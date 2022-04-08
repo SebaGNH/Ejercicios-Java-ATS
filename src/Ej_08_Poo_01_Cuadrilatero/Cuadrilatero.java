@@ -1,37 +1,42 @@
 package Ej_08_Poo_01_Cuadrilatero;
 
 public class Cuadrilatero {
-    private float area;
-    private float perimetro;
+    private float lado1;
+    private float lado2;
 
-    public Cuadrilatero(float area, float perimetro) {
-        this.area = area;
-        this.perimetro = perimetro;
-    }
-
-    @Override
-    public String toString() {
-        return "Area: " + area + ", Perimetro: " + perimetro;
-    }
-
-    public float getArea() {
-        return area;
-    }
-
-    public void setArea(float area) {
-        this.area = area;
-    }
-
-    public float getPerimetro() {
-        return perimetro;
-    }
-
-    public void setPerimetro(float perimetro) {
-        this.perimetro = perimetro;
+    public Cuadrilatero(float lado1, float lado2) {
+        this.lado1 = lado1;
+        this.lado2 = lado2;
     }
     
-    public float getCalcularCuadrilatero(){
-        return this.area * this.perimetro;
+    public Cuadrilatero(float lado1){
+        this.lado1 = this.lado2 = lado1;
     }
+
+    public float getLado1() {
+        return lado1;
+    }
+
+    public void setLado1(float lado1) {
+        this.lado1 = lado1;
+    }
+
+    public float getLado2() {
+        return lado2;
+    }
+
+    public void setLado2(float lado2) {
+        this.lado2 = lado2;
+    }
+
+    public float getPermietro(){
+        return (lado1+lado2) * 2;
+    }
+    
+    public float getArea(){
+        return lado1 * lado2;
+    }
+
+    
 
 }
