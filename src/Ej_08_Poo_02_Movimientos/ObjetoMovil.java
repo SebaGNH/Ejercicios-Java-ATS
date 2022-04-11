@@ -1,5 +1,5 @@
 
-package Ej_8_Poo_02_Movimientos;
+package Ej_08_Poo_02_Movimientos;
 
 
 public class ObjetoMovil {

@@ -1,5 +1,5 @@
 
-package Ej_8_Poo_02_Movimientos;
+package Ej_08_Poo_02_Movimientos;
 import java.util.Scanner;
 /*
 Construir un programa que permita dirigir el movimiento de un objeto dentro de un tablero y actualice su posición dentro del mismo.
