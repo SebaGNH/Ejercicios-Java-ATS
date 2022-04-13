@@ -1,10 +1,10 @@
 package Ej_08_Poo_06_Numeros_Imaginarios;
 
-public class NumerosImaginarios {
+public class NumeroImaginario {
     private double numeroA; //Parte real
     private double numeroB; //Parte imaginaria
 
-    public NumerosImaginarios(double numeroA, double numeroB) {
+    public NumeroImaginario(double numeroA, double numeroB) {
         this.numeroA = numeroA;
         this.numeroB = numeroB;
     }
@@ -29,8 +29,8 @@ public class NumerosImaginarios {
     NumeroComplejo numeroA = new NumeroComplejo(3,4);
     numeroA.getSumaNumeros(numeroB)
     */
-    public NumerosImaginarios getSumarNumeros(NumerosImaginarios imaginario){
-        NumerosImaginarios suma = new NumerosImaginarios(numeroA+imaginario.getNumeroA(), numeroB + imaginario.getNumeroB());
+    public NumeroImaginario getSumarNumeros(NumeroImaginario imaginario){
+        NumeroImaginario suma = new NumeroImaginario(numeroA+imaginario.getNumeroA(), numeroB + imaginario.getNumeroB());
         return suma;
     }
 
@@ -39,8 +39,8 @@ public class NumerosImaginarios {
     numeroB = 2 + 5i
     Multi = (3*2 - 4*5) + (3*5 + 4*2)i
     */
-    public NumerosImaginarios getMultiplicacion(NumerosImaginarios i){ // i = imaginario
-        NumerosImaginarios multi = new NumerosImaginarios( ( numeroA * i.getNumeroA() - numeroB * i.getNumeroB() ), ( numeroA * i.getNumeroB()+ numeroB * i.getNumeroA() ));
+    public NumeroImaginario getMultiplicacion(NumeroImaginario i){ // i = imaginario
+        NumeroImaginario multi = new NumeroImaginario( ( numeroA * i.getNumeroA() - numeroB * i.getNumeroB() ), ( numeroA * i.getNumeroB()+ numeroB * i.getNumeroA() ));
         return multi;
     }
 
@@ -49,7 +49,7 @@ public class NumerosImaginarios {
     numeroA = 3 + 4i
     numeroB = 3 + 4i
     */
-    public boolean getComprobarIgualdad(NumerosImaginarios imaginario){        
+    public boolean getComprobarIgualdad(NumeroImaginario imaginario){        
         if ( (numeroA== imaginario.getNumeroA()) && ( numeroB == imaginario.getNumeroB()) ) {
             return true;
         }
@@ -62,8 +62,9 @@ public class NumerosImaginarios {
     mult = 6 + 8i;
     */
 
-    public NumerosImaginarios getMultiplicarPorEntero(int numero){
-        NumerosImaginarios multi = new NumerosImaginario( numeroA * numero , numeroB * numero );
+    public NumeroImaginario getMultiplicarPorEntero(int numero){
+        NumeroImaginario multi = new NumeroImaginario( numeroA * numero , numeroB * numero );
+        return multi;
     }
     
 }
