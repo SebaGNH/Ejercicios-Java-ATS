@@ -1,5 +1,5 @@
 package Ej_08_Poo_05_Triangulo_Isoceles;
-
+import java.lang.*;
 import java.util.Scanner;
 
 public class AppMainConsole {
