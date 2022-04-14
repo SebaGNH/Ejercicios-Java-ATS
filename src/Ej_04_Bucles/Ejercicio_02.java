@@ -11,7 +11,7 @@ public static void main(String[] args) throws Exception{
 
     int numero = 0;
     do {
-        System.out.print("Ingresar un numero e indicar si es positivo o negativo, pulse 0 para salir: ");
+        System.out.print("Ingresar un nú mero e indicar si es positivo o negativo, pulse 0 para salir: ");
             numero = sc.nextInt();
         if (numero > 0) {
             System.out.println("El número es positivo");
