@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Scanner;
 
 /**
-Leer 5 números, guardarlos en un arreglo y mostrarlos en el mismo orden introducido
+Leer 5 números enteros, guardarlos en un arreglo y mostrarlos en el mismo orden introducido
  */
 public class Ejercicio_01_Arreglos {
 public static void main(String[] args) throws Exception{
@@ -13,7 +13,7 @@ public static void main(String[] args) throws Exception{
     int [] numeros = new int[5];
     
     for (int i = 0; i < numeros.length; i++) {
-        System.out.print("Ingrese el numero "+(i+1)+": ");
+        System.out.print((i+1)+"- Ingrese el numero: ");
         numeros[i] = sc.nextInt();
     }
     
