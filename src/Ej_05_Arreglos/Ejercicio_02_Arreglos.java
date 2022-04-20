@@ -16,7 +16,7 @@ public class Ejercicio_02_Arreglos {
             numeros[i] = sc.nextInt();
         }
 
-        for (int i = 5; i > 0; i--) {
+        for (int i = (numeros.length -1); i >= 0; i--) {
             System.out.println(numeros[i]);
         }
         sc.close();
