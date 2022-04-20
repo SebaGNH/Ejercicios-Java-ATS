@@ -10,11 +10,10 @@ public class Ejercicio_03_Par_o_Impar {
     
 public static void main(String[] args) throws Exception{
     Scanner sc = new Scanner(System.in);
-
-    int numero = 0;
-    do {
-        System.out.print("Ingrese números para saber si es par o impoar, pulse 0 para salir: ");
-            numero = sc.nextInt();
+    System.out.print("Ingrese números para saber si es par o impoar, pulse 0 para salir: ");
+    int numero = sc.nextInt();
+    while (numero != 0){        
+            
         if (numero %2 == 0) {
             System.out.println("Es par");
 
@@ -22,7 +21,9 @@ public static void main(String[] args) throws Exception{
             System.out.println("Es Impar");
         }
 
-    } while (numero != 0);
+        System.out.print("Ingrese otro número ");
+        numero = sc.nextInt();
+    } ;
     System.out.println("\nFin del programa");
 
     sc.close();
