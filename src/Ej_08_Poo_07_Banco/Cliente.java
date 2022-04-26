@@ -39,6 +39,7 @@ public class Cliente {
         }
     }
 
+    /* Inicio <-- Consultar Saldo ----- ----- ----- ----- ----- ----- ----- */
     public double getConsularSaldo(int nroCuenta){
         double saldo = 0;
         for (Cuenta c : cuentas) {
@@ -49,6 +50,13 @@ public class Cliente {
         return saldo;
     }
 
+    public double getConsultarSaldoSimple(int nroCuenta){
+        return cuentas[nroCuenta].getSaldo();
+    }
+    /* Fin <<<<-- Consultar Saldo ----- ----- ----- ----- ----- ----- ----- */
+
+
+    /* Inicio <-- Ingresar Saldo ----- ----- ----- ----- ----- ----- ----- */
     public String ingresarSaldo(double monto, int nroCuenta){
         double saldo;
         for (Cuenta c : cuentas) {
@@ -61,6 +69,20 @@ public class Cliente {
         return "El monto ingresado debe ser mayor a 0";
     }
 
+    public String ingresarSaldoSimple(double monto, int nroCuenta){
+        double saldo;
+        if (monto > 0) {
+            saldo = cuentas[nroCuenta].getSaldo() + monto;
+            cuentas[nroCuenta].setSaldo(saldo);
+            return "Dinero ingresado, su nuevo saldo es de $" +  cuentas[nroCuenta].getSaldo();
+        }
+        return "El monto ingresado debe ser mayor a 0";
+    }
+    
+    /* Fin <<<<-- Ingresar Saldo ----- ----- ----- ----- ----- ----- ----- */
+
+
+    /* Inicio <-- Retirar Saldo ----- ----- ----- ----- ----- ----- ----- */
     public String retirarDinero(double monto, int nroCuenta){
         double saldo;
         for (Cuenta c : cuentas) {
@@ -73,6 +95,18 @@ public class Cliente {
         return "Extracción incorrecta ";
     }
 
+
+    public String retirarDineroSimple(double monto, int nroCuenta){
+        double saldo;
+        if (monto <= cuentas[nuevaCuenta].getSaldo()) {
+            saldo = cuentas[nuevaCuenta].getSaldo() - monto;
+            cuentas[nuevaCuenta].setSaldo(saldo);
+            return "Extracción correcta, su nuevo saldo es de: $" + cuentas[nuevaCuenta].getSaldo();
+        }
+        return "Extracción incorrecta ";
+    }
+
+    /* Fin <<<<-- Retirar Saldo ----- ----- ----- ----- ----- ----- ----- */
 }
 
 
