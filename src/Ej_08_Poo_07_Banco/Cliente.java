@@ -7,11 +7,11 @@ public class Cliente {
     private Cuenta [] cuentas;
 
 
-    public Cliente(String nombre, String apellido, String dni, int numeroCuenta){
+    public Cliente(String nombre, String apellido, String dni, Cuenta [] nuevaCuenta){
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
-        this.cuentas = new Cuenta[numeroCuenta];
+        this.cuentas = nuevaCuenta;
     }
 
     public String getNombre() {
@@ -30,14 +30,6 @@ public class Cliente {
         return  "Nombre: "+nombre+", Apellido: "+apellido+ ", Dni: "+dni + cuentas.toString();
     }
 
-    public void agregarCuenta(Cuenta nuevaCuenta){
-        for (int i = 0; i < cuentas.length; i++) {
-            if (cuentas[i] != null) {
-                cuentas[i] = nuevaCuenta;
-                break;
-            }
-        }
-    }
 
     /* Inicio <-- Consultar Saldo ----- ----- ----- ----- ----- ----- ----- */
     public double getConsularSaldo(int nroCuenta){
@@ -98,55 +90,13 @@ public class Cliente {
 
     public String retirarDineroSimple(double monto, int nroCuenta){
         double saldo;
-        if (monto <= cuentas[nuevaCuenta].getSaldo()) {
-            saldo = cuentas[nuevaCuenta].getSaldo() - monto;
-            cuentas[nuevaCuenta].setSaldo(saldo);
-            return "Extracción correcta, su nuevo saldo es de: $" + cuentas[nuevaCuenta].getSaldo();
+        if (monto <= cuentas[nroCuenta].getSaldo()) {
+            saldo = cuentas[nroCuenta].getSaldo() - monto;
+            cuentas[nroCuenta].setSaldo(saldo);
+            return "Extracción correcta, su nuevo saldo es de: $" + cuentas[nroCuenta].getSaldo();
         }
         return "Extracción incorrecta ";
     }
 
     /* Fin <<<<-- Retirar Saldo ----- ----- ----- ----- ----- ----- ----- */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//---------------------------------------------------
-
-/*     @Override
-    public String toString(){
-        return super.toString()+", Nombre: "+nombre+", Apellido: "+apellido+ ", Dni: "+dni; 
-    } */
-
-
-
-/*     public String ingresarDinero(double monto){
-        if (monto > 0) {
-            double saldo = super.getSaldo() + monto;
-            super.setSaldo(saldo);
-            return "Dinero ingresado, su nuevo saldo es de $" + super.getSaldo();
-
-        }
-        return "El monto ingresado debe ser mayor a 0";
-    }
-
-    public String retirarDinero(double monto){
-        if (monto < super.getSaldo()) {
-            double saldo = super.getSaldo() - monto;
-            super.setSaldo(saldo);
-            return "Extracción correcta, su nuevo saldo es de: $" + super.getSaldo();
-
-        }
-        return "Extracción incorrecta, su saldo disponible es de: $" + super.getSaldo();
-    } */
