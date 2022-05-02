@@ -3,7 +3,7 @@ package Ej_05_Arreglos;
 import java.util.Scanner;
 
 /**
-Leer 5 números por teclado, almacenarlos en un arreglo y a continuación realizar la media de los números positivos, la media de los negativos y contar el número de ceros
+Leer 5 números enteros por teclado, almacenarlos en un arreglo y a continuación realizar la media de los números positivos, la media de los negativos y contar el número de ceros
  */
 public class Ejercicio_03_Arreglos {
     public static void main(String[] args) {
