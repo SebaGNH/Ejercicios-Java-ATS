@@ -37,5 +37,4 @@ public class Sucursal {
         }
         return cadena;
     }
-
 }

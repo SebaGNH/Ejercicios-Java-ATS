@@ -32,7 +32,8 @@ public class Paquete {
 
     @Override
     public String toString() {
-        return "Número de referencia: " + numeroReferencia + ", DNI: " + this.dni + ", Peso: " + peso + ", Prioridad: " + getPrioridadPaquete();
+        return "Número de referencia: " + numeroReferencia + ", DNI: " + this.dni + ", Peso: " + peso 
+        + ", Prioridad: " + getPrioridadPaquete()+ ", Precio: $"+ getCalcularPrecio();
     }
     
     public float getCalcularPrecio(){//0. normal - sin prioridad //  1. alta- 10 dolares extra // 2.express- 20 dolres 
@@ -63,6 +64,4 @@ public class Paquete {
         }
         return cadena;
     }
-    
-    
 }

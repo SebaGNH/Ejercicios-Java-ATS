@@ -2,13 +2,13 @@ package Ej_08_Poo_08_Envio_Paquetes;
 
 import java.util.Scanner;
 public class AppMainConsole {
-    public static String getMostrarPaquetes(Paquete [] paquetes){
+    /*   public static String getMostrarPaquetes(Paquete [] paquetes){
         String mostrarPaquetes = "";
         for (Paquete p : paquetes) {
             mostrarPaquetes += "\n" + p.toString();
         }
         return mostrarPaquetes;
-    }
+    } */
 
     public static String getSucursales(Sucursal sucursales){
         String mostrarSucursales = "";
@@ -35,7 +35,7 @@ public static void main(String[] args) throws Exception{
     int numeroSucursal = 888;
     String direccion = "Sipe Sipe 1200";
     String ciudad = "Elvine";
-    int cantPaquetes = 2; */
+    int cantPaquetes = 3; */
 
     Paquete [] paquetes = new Paquete[cantPaquetes];
 
@@ -56,6 +56,8 @@ public static void main(String[] args) throws Exception{
     //System.out.println(getMostrarPaquetes(paquetes));
 
     System.out.println(getSucursales(sucursales));
+
+
     sc.close();
 }
 }
