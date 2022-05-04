@@ -4,7 +4,7 @@ public class Sucursal {
     private int numeroSucursal;
     private String direccion;
     private String ciudad;
-    private Paquete paquetes;
+    private Paquete [] paquetes;
 
     public int getNumeroSucursal() {
         return numeroSucursal;
@@ -18,23 +18,24 @@ public class Sucursal {
         return ciudad;
     }
 
-    public Paquete getPaquetes() {
-        return paquetes;
-    }
-
-    public Sucursal(int numeroSucursal, String direccion, String ciudad, Paquete paquetes) {
+    public Sucursal(int numeroSucursal, String direccion, String ciudad, Paquete [] nuevoPaquete) {
         this.numeroSucursal = numeroSucursal;
         this.direccion = direccion;
         this.ciudad = ciudad;
-        this.paquetes = paquetes;
+        this.paquetes = nuevoPaquete;
     }
 
     @Override
     public String toString() {
-        return "Número sucursal: " + numeroSucursal + ", Dirección: " + direccion + ", Ciudad: " + ciudad + ", Pauete" + paquetes.toString();
+        return "\nNúmero sucursal: " + numeroSucursal + ", Dirección: " + direccion + ", Ciudad: " + ciudad + getPaquetes();
     }
 
-    
-    
-    
+    public String getPaquetes(){
+        String cadena = "\n.:Paquetes:.";
+        for (Paquete p : paquetes) {
+            cadena += "\n* "+ p.toString();
+        }
+        return cadena;
+    }
+
 }

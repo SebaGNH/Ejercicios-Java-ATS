@@ -7,10 +7,6 @@ public class Paquete {
     private int prioridad;
 
 
-    
-    
-    // metodo Calcular precio
-
     public int getNumeroReferencia() {
         return numeroReferencia;
     }
@@ -36,7 +32,7 @@ public class Paquete {
 
     @Override
     public String toString() {
-        return ", Número de referencia: " + numeroReferencia + ", DNI: " + dni + ", Peso: " + peso + ", Prioridad: " + prioridad;
+        return "Número de referencia: " + numeroReferencia + ", DNI: " + this.dni + ", Peso: " + peso + ", Prioridad: " + getPrioridadPaquete();
     }
     
     public float getCalcularPrecio(){//0. normal - sin prioridad //  1. alta- 10 dolares extra // 2.express- 20 dolres 
@@ -50,6 +46,22 @@ public class Paquete {
                 break; 
         }
         return calcularPrecio;
+    }
+
+    public String getPrioridadPaquete(){
+        String cadena = "";
+        switch (this.prioridad) {
+            case 0:
+            cadena = "0. normal";
+                break;
+            case 1:
+            cadena = "1. alta";
+                break;
+            case 2:
+            cadena = "2. express";
+                break;
+        }
+        return cadena;
     }
     
     
