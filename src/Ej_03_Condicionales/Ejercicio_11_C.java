@@ -32,6 +32,8 @@ public static void main(String[] args) throws Exception{
 
     }if (operacion == 'd') {
         System.out.println("La operación dividir de "+numero_1 +" dividido en "+ numero_2 + " es de: "+(numero_1 / numero_2));
+    }else{
+        System.out.println("Errro, se equivoó de operación");
     }    
 
     sc.close();
